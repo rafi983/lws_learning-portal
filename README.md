@@ -1,4 +1,4 @@
-# Crystal Academy - Learning Platform
+# Lws Learning Portal
 
 A comprehensive learning management system built with React.js and Redux Toolkit, featuring separate admin and student portals with video courses, assignments, quizzes, and leaderboard functionality.
 
@@ -91,8 +91,8 @@ A comprehensive learning management system built with React.js and Redux Toolkit
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd lws_learning-platform
+   git clone https://github.com/rafi983/lws_learning-portal
+   cd lws_learning-portal
    ```
 
 2. **Install frontend dependencies**
