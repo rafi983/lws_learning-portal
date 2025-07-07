@@ -85,8 +85,9 @@ A comprehensive learning management system built with React.js and Redux Toolkit
 ### Prerequisites
 - **Node.js** (v14 or higher)
 - **npm** or **yarn**
+- **Vercel account** (for deployment)
 
-### Installation
+### Local Development
 
 1. **Clone the repository**
    ```bash
@@ -106,12 +107,18 @@ A comprehensive learning management system built with React.js and Redux Toolkit
    cd ..
    ```
 
-### Running the Application
+4. **Set up environment variables**
+   ```bash
+   cp .env.example .env
+   ```
+   Update the `.env` file with your local API URL: `REACT_APP_API_URL=http://localhost:9000`
+
+### Running Locally
 
 1. **Start the backend server**
    ```bash
    cd server
-   npm start
+   npm run dev
    ```
    The API server will run on `http://localhost:9000`
 
@@ -120,6 +127,46 @@ A comprehensive learning management system built with React.js and Redux Toolkit
    npm start
    ```
    The React app will run on `http://localhost:3000`
+
+## 🌐 Deployment on Vercel
+
+### Backend Deployment
+
+1. **Deploy the server folder to Vercel**
+   ```bash
+   cd server
+   npx vercel --prod
+   ```
+   Or push to GitHub and connect the `server` folder as a separate Vercel project.
+
+2. **Note the deployed API URL** (e.g., `https://your-api-name.vercel.app`)
+
+### Frontend Deployment
+
+1. **Update environment variables**
+   Create a `.env` file in the root directory:
+   ```bash
+   REACT_APP_API_URL=https://your-deployed-api-url.vercel.app
+   ```
+
+2. **Deploy the frontend**
+   ```bash
+   npx vercel --prod
+   ```
+   Or connect your GitHub repository to Vercel and set the environment variable in the Vercel dashboard.
+
+### Environment Variables in Vercel Dashboard
+
+When deploying via Vercel dashboard:
+1. Go to your project settings
+2. Navigate to "Environment Variables"
+3. Add: `REACT_APP_API_URL` = `https://your-deployed-api-url.vercel.app`
+4. Redeploy your application
+
+### Live Demo
+
+- **Frontend**: `https://your-frontend-url.vercel.app`
+- **Backend API**: `https://your-backend-url.vercel.app`
 
 ## 🔐 Default Credentials
 
